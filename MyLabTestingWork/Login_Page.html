@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_Page</title>
+    <script>
+        function print(){
+     var d = document.getElementById("password").value;
+      var e = document.getElementById("confirm_password").value;
+     
+        if(e===d){
+            document.write("<marquee><h4 style='color: green;'> !!!! Thanks for submitting the form !!!!!</h4></marquee>")
+         }
+         else{
+            document.write("<marquee><h4 style='color: red;'> !!!! Form not submitted. Passwords not same !!!!!</h4></marquee>")
+        }
+     }
+    </script>
+</head>
+<body background="Login_Background.jpg">
+    <form onsubmit="print()" method="post">
+           
+    <table style="margin-left: 35%; margin-top: 10%;">
+    <th colspan="2" style="color: gold">&ensp;User Login</th>
+    <tr><td></td><td></td></tr>
+    <tr></tr>
+        <tr>
+            <td>
+                User Name<sup style="color: red;">&nbsp;*</sup>
+            </td>
+            <td>
+                <input type="text" name="User_Name" id="User_Name" required maxlength="12" minlength="4" placeholder="User Name">
+
+            </td>
+
+            <tr>
+                <td>
+                    Password<sup style="color: red;">&nbsp;*</sup>
+                </td>
+                <td>
+                    <input type="password" name="password" id="password" required maxlength="15" minlength="8" placeholder="Password">
+    
+                </td>
+
+            <tr>
+                <td>
+                    Confirm Password<sup style="color: red;">&nbsp;*</sup>
+                </td>
+                <td>
+                <input type="password" name="confirm_password" id="confirm_password" required maxlength="15" minlength="8" placeholder="Confirm Password">
+           
+                </td>
+        </tr>
+
+        <tr>
+            <td>
+               
+            </td>
+            <td>
+            <input type="submit" name="submit" id="submit" >
+    
+            </td>
+    </tr>
+
+    </table>
+   
+</form>
+
+    
+</body>
+</html>

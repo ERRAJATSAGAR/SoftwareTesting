@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle</title>
+    <script>
+        function IsTriangle(){
+     
+            // document.write("<center><h4 style='color: green;'> Addition Result</h4></center>")
+           var a = parseInt(document.getElementById("num1").value);
+           var b = parseInt(document.getElementById("num2").value);
+           var c = parseInt(document.getElementById("num3").value);
+           var largest, other1, other2
+           if(a>b && a>c){
+            largest =a
+            other1 = b
+            other2 = c
+           }
+           else if(a<b && b>c){
+            largest =b
+            other1 = a
+            other2 = c
+           }
+           else{
+            largest =c
+            other1 = b
+            other2 = a
+           }
+
+       if(a+c>b && a+b>c && b+c>a){
+            if(a==b && b==c){
+            document.write("<center><h4 style='color: green;'> It will form Equilateral Triangle with side "+a+"</h4></center>")
+           }
+           else if(largest*largest==other1*other1+other2*other2){
+            document.write("<center><h4 style='color: green;'> It will form a Right Angled Triangle with Hypoteneus "+largest+" and other sides "+other2+" and "+other1+"</h4></center>")
+           }
+           else if(a==b || b==c || c==a){
+            document.write("<center><h4 style='color: green;'> It will form an Isosceles Triangle</h4></center>")
+           }
+           
+           else{
+            document.write("<center><h4 style='color: green;'> It will form Scalene Triangle</h4></center>")
+           }
+        }
+        else{
+            document.write("<center><h4 style='color: green;'> It will not form a Triangle</h4></center>")
+        }   
+           
+        }
+    </script>
+</head>
+<body background="Triangle.jpg" style="background-size: cover; background-repeat: no-repeat;">
+    <center> <h2 style="color: rgb(177, 70, 91);">Is it a Triangle?</h2></center>
+   
+    <form onsubmit="IsTriangle()" method="post">
+    <table style="margin-left: 65%; margin-top: 14%;">
+    <th colspan="2" style="color: rgb(89, 0, 255)">&ensp;Validation of Triangle</th>
+    <tr><td></td><td></td></tr>
+    <tr></tr>
+        <tr>
+            <td>
+               <b style="color: rgb(24, 138, 30);">First Side</b><sup style="color: red;">&nbsp;*</sup>
+            </td>
+            <td>
+                <input type="number" name="num1" id="num1" required placeholder="Number 1" min="1">
+
+            </td>
+
+            <tr>
+                <td>
+                    <b style="color: rgb(24, 138, 30);">Second Side</b><sup style="color: red;">&nbsp;*</sup>
+                </td>
+                <td>
+                    <input type="number" name="num2" id="num2" required placeholder="Number 2" min="1">
+    
+                </td>
+
+            <tr>
+                <td>
+                    <b style="color: rgb(24, 138, 30);">Third Side</b><sup style="color: red;">&nbsp;*</sup>
+                </td>
+                <td>
+                <input type="number" name="num3" id="num3" required  placeholder="Number 3" min="1">
+           
+                </td>
+        </tr>
+
+        <tr>
+            <td>
+               
+            </td>
+            <td>
+            <input type="submit" name="Find" id="submit">
+    
+            </td>
+    </tr>
+
+    </table>
+   
+
+</form>
+</body>
+</html>
